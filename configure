@@ -6,19 +6,19 @@
 
 # You may comment out/uncomment any of these lines to change defaults.
 PREFIX=/usr/local
-ENABLE_2P=y		# 2-player
-ENABLE_JS=y		# joystick
-ENABLE_NETWORK=y
+#ENABLE_2P=n		# 2-player
+#ENABLE_JS=n		# joystick
+#ENABLE_NETWORK=n
 #WITH_CURSES=y
-WITH_X=y
+#WITH_X=n
 #WITH_ALLEGRO=y
 
-ENABLE_TERM_RESIZING=y
+#ENABLE_TERM_RESIZING=n
 ENABLE_MENU=y
 ENABLE_BLOCKSTYLES=y
 
 # DOS only
-PCTIMER=y
+#PCTIMER=n
 
 # defaults are assigned later
 BINDIR=
@@ -208,6 +208,10 @@ if [ -n "$ZSH_VERSION" ]; then
 	emulate sh
 fi
 
+OS=${SYSTEST_OUT%% _*}
+echo "operating system: $OS"
+ENVIR=${OS#* }
+OS=${OS%% *}
 
 DPREFIX=/usr
 if [ -n "$DJDIR" ]; then

@@ -55,26 +55,26 @@ libs: gamea menua netwa inputa drawa textgfxa
 	mv -f textgfx/textgfx.a .
 
 gamea:
-	$(MAKE) -Cgame
+	cd game; $(MAKE)
 menua:
-	$(MAKE) -Cmenu
+	cd menu; $(MAKE)
 netwa:
-	$(MAKE) -Cnetw
+	cd netw; $(MAKE)
 inputa:
-	$(MAKE) -Cinput $(INPUT_SYS)
+	cd input; $(MAKE) $(INPUT_SYS)
 drawa:
-	$(MAKE) -Cdraw
+	cd draw; $(MAKE)
 textgfxa:
-	$(MAKE) -Ctextgfx
+	cd textgfx; $(MAKE)
 
 clean:
 	rm -f tetris tetris.exe $(OBJS) pctimer.o
 	rm -f game.a menu.a menuext.a netw.a input.a draw.a textgfx.a
-	$(MAKE) -Cgame clean
-	$(MAKE) -Cmenu clean
-	$(MAKE) -Cnetw clean
-	$(MAKE) -Cinput clean
-	$(MAKE) -Cdraw clean
-	$(MAKE) -Ctextgfx clean
+	cd game; $(MAKE) clean
+	cd menu; $(MAKE) clean
+	cd netw; $(MAKE) clean
+	cd input; $(MAKE) clean
+	cd draw; $(MAKE) clean
+	cd textgfx; $(MAKE) clean
 
 .PHONY: libs gamea menua netwa inputa drawa textgfxa clean
