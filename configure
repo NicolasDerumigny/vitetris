@@ -2,13 +2,13 @@
 
 # I hope this script will save you the task of editing config.mk manually.
 # It should work with most sh-compatible shells (perhaps not some very old).
-# 
+#
 
 # You may comment out/uncomment any of these lines to change defaults.
 PREFIX=/usr/local
-#ENABLE_2P=n		# 2-player
+ENABLE_2P=y		# 2-player
 #ENABLE_JS=n		# joystick
-#ENABLE_NETWORK=n
+ENABLE_NETWORK=y
 #WITH_CURSES=y
 #WITH_X=n
 #WITH_ALLEGRO=y
@@ -242,7 +242,7 @@ if [ $OS != unix ]; then
 		PREFIX=c:/vitetris
 	fi
 	WITH_X=
-fi  
+fi
 
 if [ -n "$PCTIMER" ] && [ $OS = msdos ]; then
 	echo -n 'checking for pctimer... '

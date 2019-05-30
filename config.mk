@@ -14,10 +14,10 @@ datadir = $(datarootdir)/allegro
 UNIX = y
 CC = riscv64-unknown-linux-gnu-gcc
 
-#TWOPLAYER = y
+TWOPLAYER = y
 #JOYSTICK = y
-#NETWORK = y
-#TTY_SOCKET = y
+NETWORK = y
+TTY_SOCKET = y
 #TERM_RESIZING = y
 MENU = y
 BLOCKSTYLES = y
