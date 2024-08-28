@@ -1,5 +1,5 @@
 #ifdef NCURSES_VERSION
-#define COLOR_1_6(i) (i+1)
+#define COLOR_1_6(i) (i + 1)
 #define COLOR_DEFAULT_BG -1
 #else
 #define COLOR_1_6(i) colors1_6[i]

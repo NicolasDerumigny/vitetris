@@ -2,8 +2,8 @@
 #if HAVE_SYS_SELECT_H
 #include <sys/select.h>
 #elif __DJGPP__
-#include <time.h>
 #include <string.h>
+#include <time.h>
 #else
 #include <sys/time.h>
 #include <sys/types.h>

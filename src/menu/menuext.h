@@ -10,9 +10,9 @@ void options_menu(const char **items, int n, menuhandler f, int x, int y);
 #endif
 
 struct termopt {
-	unsigned char flag;
-	const char *s;
-	const char *key;
+  unsigned char flag;
+  const char *s;
+  const char *key;
 };
 int term_optionhandler(int k, const struct termopt *o);
 

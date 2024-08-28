@@ -1,16 +1,15 @@
 #include "int32t.h"
 
-extern
-struct hiscore {
-	char name[8];
-	int_least32_t score;
-	char startlevel;
-	char level;
-	short lines;
+extern struct hiscore {
+  char name[8];
+  int_least32_t score;
+  char startlevel;
+  char level;
+  short lines;
 } hiscores[10];
 
-#define ishiscore() (player1.score >= 12000 && \
-		     player1.score > hiscores[9].score)
+#define ishiscore()                                                            \
+  (player1.score >= 12000 && player1.score > hiscores[9].score)
 
 int readhiscores(const char *filename);
 

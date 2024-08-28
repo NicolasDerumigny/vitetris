@@ -1,5 +1,7 @@
+#include "menu.h"
+
 #ifndef NULL
-#define NULL (void*)0
+#define NULL (void *)0
 #endif
 
 void inp_printkeys(int dev, int x, int y);

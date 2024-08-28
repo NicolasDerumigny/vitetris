@@ -26,8 +26,8 @@ int connectsock(int size);
 #endif
 
 #ifndef offsetof
-#define offsetof(type, member) ((size_t) ((type *) 0)->member)
+#define offsetof(type, member) ((size_t)((type *)0)->member)
 #endif
 
 #undef SUN_PATH
-#define SUN_PATH(ptr) (((struct sockaddr_un *) (ptr))->sun_path)
+#define SUN_PATH(ptr) (((struct sockaddr_un *)(ptr))->sun_path)

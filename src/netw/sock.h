@@ -20,16 +20,15 @@ extern char my_name[17];
 extern char opponent_name[17];
 
 extern struct player_id {
-	unsigned char id;
-	char name[17];
-	char mode[4];
+  unsigned char id;
+  char name[17];
+  char mode[4];
 } *playerlist;
 extern int playerlist_n;
 
-extern
-const struct invit {
-	char user[16];
-	char tty[8];
+extern const struct invit {
+  char user[16];
+  char tty[8];
 } *invit;
 
 extern char this_tty[8];

@@ -24,7 +24,7 @@ void printmenuitem_options(const char *str, int sel_index);
 /* Draw menu with n items and pos as selected index number.
  * handlers may be NULL or an array with some null pointers. */
 void drawmenu(const char **menu, int n, int pos, int x, int y,
-	      menuhandler *handlers);
+              menuhandler *handlers);
 
 /* Prints menu item(s) and calls menu handlers if given.
  * i is a pointer to update with new selected menu-item index.
@@ -36,18 +36,18 @@ void drawmenu(const char **menu, int n, int pos, int x, int y,
  *   1  no action
  *   2  proceed (A button) */
 int handle_menuitem(const char **menu, int n, int *i, int x, int y,
-		    menuhandler *handlers, int keypr);
+                    menuhandler *handlers, int keypr);
 
 /* Returns 0 if a handler returned 0.
  * Returns selected index + 1 if a handler returned 2. */
 int openmenu(const char **menu, int n, int i, int x, int y,
-	     menuhandler *handlers);
+             menuhandler *handlers);
 
 /* Handles a menu with two columns (extends handle_menuitem).
  * h is the number of items in the first column.
  * Returns 3 if column changed. */
-int handle_menuitem_2cols(const char **menu, int n, int *i, int h,
-			  int x, int y, menuhandler *handlers, int keypr);
+int handle_menuitem_2cols(const char **menu, int n, int *i, int h, int x, int y,
+                          menuhandler *handlers, int keypr);
 
 /* Prints an editable text field with the cursor at pos. */
 void printtextbox(const char *text, int pos);
@@ -65,14 +65,14 @@ int dropdownlist(const char **items, int n, int i, int x, int y);
 int selectitem(const char **items, int n, int *i, int keypress);
 
 #ifndef TWOPLAYER
-#  define GAMEMENU_LENGTH 10
-#  define player_ 0
+#define GAMEMENU_LENGTH 10
+#define player_ 0
 #else
-#  define GAMEMENU_LENGTH 7
+#define GAMEMENU_LENGTH 7
 
-extern int player_;  /* 0 - single player
-			1 - player1
-			2 - player2 */
+extern int player_; /* 0 - single player
+                       1 - player1
+                       2 - player2 */
 #endif
 
 void inputsetup_menu(int player, int x, int y);

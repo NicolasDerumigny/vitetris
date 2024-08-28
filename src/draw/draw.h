@@ -1,3 +1,5 @@
+#include "../game/tetris.h"
+
 extern char tetrom_colors[7];
 
 void draw_tetris_logo(int x, int y);
@@ -6,7 +8,7 @@ void print_vitetris_ver(int x, int y);
 #ifdef TWOPLAYER
 int board_x(int pl, int col);
 #else
-#define board_x(pl, col) (2*col+11)
+#define board_x(pl, col) (2 * col + 11)
 #endif
 void next_xy(int pl, int *x, int *y);
 
@@ -20,17 +22,13 @@ void print_press_key();
 
 void drawnext(const struct player *p, const struct tetr *next);
 
-enum drawmode {
-	DRAW_PIECE,
-	DRAW_BLOCKS,
-	CLEAR_BLOCKS
-};
+enum drawmode { DRAW_PIECE, DRAW_BLOCKS, CLEAR_BLOCKS };
 
 /* x and y here means column and row in the player's playfield */
 
 void drawblocks(const struct player *p, int bl, int x, int y,
-		enum drawmode mode);
-#define drawpiece(plr, bl, x, y)   drawblocks(plr, bl, x, y, DRAW_PIECE)
+                enum drawmode mode);
+#define drawpiece(plr, bl, x, y) drawblocks(plr, bl, x, y, DRAW_PIECE)
 #define clearblocks(plr, bl, x, y) drawblocks(plr, bl, x, y, CLEAR_BLOCKS)
 
 void drawrow(const struct player *p, int y);

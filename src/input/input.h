@@ -1,10 +1,10 @@
 /* keypress values */
 #define MVLEFT 1
 #define MVRIGHT 2
-#define MVUP 3		/* rotate */
-#define MVDOWN 4	/* softdrop */
-#define A_BTN 5		/* rotate clockwise */
-#define B_BTN 6		/* rotate anticlockwise */
+#define MVUP 3   /* rotate */
+#define MVDOWN 4 /* softdrop */
+#define A_BTN 5  /* rotate clockwise */
+#define B_BTN 6  /* rotate anticlockwise */
 #define HARDDROP ' '
 #define STARTBTN '\n'
 #define ESC '\033'

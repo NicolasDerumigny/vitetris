@@ -1,4 +1,4 @@
-CC = riscv64-unknown-linux-gnu-gcc
+CC = /home/derumigny/FPGA/cva6-sdk/buildroot/output/host/bin/riscv64-buildroot-linux-gnu-gcc
 CCFLAGS = $(CFLAGS) $(CPPFLAGS)
 #CFLAGS = -O2 -Wall -pedantic -Wno-parentheses
 CFLAGS = -O2

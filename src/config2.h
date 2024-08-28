@@ -19,7 +19,7 @@
 #else
 #define CONFIG_FILENAME "vitetris.cfg"
 #endif
- 
+
 /* Only used if UNIX */
 #ifndef HISCORE_FILENAME
 #define HISCORE_FILENAME "/var/games/vitetris-hiscores"

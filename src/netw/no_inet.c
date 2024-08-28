@@ -1,6 +1,6 @@
 #include "sock.h"
 
-struct player_id *playerlist = (void*)0;
+struct player_id *playerlist = (void *)0;
 int playerlist_n = 0;
 
 void request_playerlist() {}

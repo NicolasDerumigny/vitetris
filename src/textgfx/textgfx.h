@@ -20,11 +20,11 @@
 
 extern unsigned textgfx_flags;
 
-#define _ASCII	    (textgfx_flags & ASCII)
-#define _WHITE_BG   (textgfx_flags & WHITE_BG)
+#define _ASCII (textgfx_flags & ASCII)
+#define _WHITE_BG (textgfx_flags & WHITE_BG)
 #define _MONOCHROME (textgfx_flags & MONOCHROME)
 #define _HEIGHT_24L (textgfx_flags & HEIGHT_24L)
-#define _TT_BLOCKS  (textgfx_flags & TT_BLOCKS)
+#define _TT_BLOCKS (textgfx_flags & TT_BLOCKS)
 #define _TT_BLOCKS_BG (textgfx_flags & TT_BLOCKS_BG)
 #define TT_MONO (TT_BLOCKS | MONOCHROME)
 #define _XTERM (textgfx_flags & XTERM)
@@ -113,21 +113,21 @@ void setattr_underline();
 
 /* Line drawing characters - used with putch */
 
-#define UPLEFT	 ('l' | 0x100)
-#define LOWLEFT  ('m' | 0x100)
-#define UPRIGHT	 ('k' | 0x100)
+#define UPLEFT ('l' | 0x100)
+#define LOWLEFT ('m' | 0x100)
+#define UPRIGHT ('k' | 0x100)
 #define LOWRIGHT ('j' | 0x100)
 #define CROSSLINES ('n' | 0x100)
-#define HLINE	 ('q' | 0x100)
-#define VLINE	 ('x' | 0x100)
-#define LEFT_T	 ('t' | 0x100)
-#define RIGHT_T	 ('u' | 0x100)
+#define HLINE ('q' | 0x100)
+#define VLINE ('x' | 0x100)
+#define LEFT_T ('t' | 0x100)
+#define RIGHT_T ('u' | 0x100)
 #define BOTTOM_T ('v' | 0x100)
-#define TOP_T	 ('w' | 0x100)
-#define TEXTURE1 ('a' | 0x100)	/* ACS_CKBOARD */
-#define TEXTURE2 ('h' | 0x100)	/* ACS_BOARD or blank */
-#define BULLET	 ('~' | 0x100)
-#define UPARROW	 ('-' | 0x100)
+#define TOP_T ('w' | 0x100)
+#define TEXTURE1 ('a' | 0x100) /* ACS_CKBOARD */
+#define TEXTURE2 ('h' | 0x100) /* ACS_BOARD or blank */
+#define BULLET ('~' | 0x100)
+#define UPARROW ('-' | 0x100)
 
 /* putch conflicts with DOS conio */
 void put_ch(int ch);

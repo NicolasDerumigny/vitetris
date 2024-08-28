@@ -12,7 +12,7 @@ datadir = $(datarootdir)/allegro
 #datadir = $(datarootdir)/allegro/vitetris
 
 UNIX = y
-CC = riscv64-unknown-linux-gnu-gcc
+CC = /home/derumigny/FPGA/cva6-sdk/buildroot/output/host/bin/riscv64-buildroot-linux-gnu-gcc
 
 TWOPLAYER = y
 #JOYSTICK = y

@@ -1,21 +1,21 @@
 struct option {
-	union val {
-		int integ;
-		char str[4];
-		const void *p;
-	} val;
-	struct option *next;
-	char tp_key[4];
+  union val {
+    int integ;
+    char str[4];
+    const void *p;
+  } val;
+  struct option *next;
+  char tp_key[4];
 };
 
-#define opt_key(o) ((o)->tp_key+1)
+#define opt_key(o) ((o)->tp_key + 1)
 #define opt_isint(o) ((o)->tp_key[0] == 0)
 #define opt_isstr(o) ((o)->tp_key[0] == 1)
 
 extern struct sect {
-	char name[8];
-	struct option *opts;
-	struct sect *next;
+  char name[8];
+  struct option *opts;
+  struct sect *next;
 } sect_hd;
 
 /* returns 0 if converted to int, 1 if copied as string.
